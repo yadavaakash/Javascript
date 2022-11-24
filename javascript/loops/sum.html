@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form name="frm">
+            num1:<input type="text" name="n1"/><br>
+            num2:<input type="text" name="n2"/><br>
+            Result:<input type="text" name="res" readonly><br>
+            <input type="button" value="SUM" onclick="add()" />
+        </form>
+        <script>
+            function add(){
+            var num1, num2;
+            num1 = parseFloat(frm.n1.value);
+            num2 = parseFloat(frm.n2.value);
+
+            a = num1 + num2;
+            frm.res.value = a;
+            }
+        </script>
+    </body>
+</html>
