@@ -1,0 +1,45 @@
+<html>
+    <body>
+        <p id="demo">Hello World</p>
+        <button onclick="myfuction()">Click Me!!</button>
+        <p>=======================================================</p>
+        
+        <form name="frm">
+            Enter No: <input type="text" name="n1" ><br><br>
+            <input type="button" value="cube" onclick="getcube()"/>
+        </form>
+        <p>=======================================================</p>
+
+        <form>
+            Enter value: <input type="text"  ><br><br>
+            <input type="button" value="Click Me" onclick="count()"/>
+        </form>
+        <p>=======================================================</p>    
+        
+        
+            <p class="demo">Hello World</p>
+            <p class="demo">Hello World</p>
+            <button onclick="myfunction()">Click Me!!</button>
+        
+        <p>=======================================================</p>    
+
+        <script>
+            function myfuction(){
+                x = document.getElementById("demo");
+                x.style.color = "red";
+            }
+            function getcube(){
+                number = document.getElementsByName("n1")[0].value;
+                alert(number * number * number  );
+                
+            }
+            function count(){
+                a = document.getElementsByTagName("input");
+                alert("input tags are :"+ a.length);
+            }
+            function myfunction(){
+                x = document.getElementsByClassName("demo");
+                x[0].style.color = "red";
+            }
+        </script>
+</html>

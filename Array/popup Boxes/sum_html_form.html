@@ -1,0 +1,128 @@
+<html>
+<body>
+    <form name="frm">
+        num1: <input type="text" name="n1" ><br>
+        num2: <input type="text" name="n2" ><br>
+        num3: <input type="text" name="n3" ><br>
+        num4: <input type="text" name="n4" ><br>
+        result: <input type="text" name="res" readonly ><br>
+        <input type="button"  value="SUM" onclick="add()"  >
+        <input type="button"  value="SUB" onclick="sub()"  >
+        <input type="button"  value="MLT" onclick="mlt()"  >
+        <input type="button"  value="DIV" onclick="div()"  >
+    </form>
+
+
+    <script>
+        function add() {
+            var num1, num2,n3,n4;
+            if (frm.n1.value == "") {
+                alert(" Enter num1: ");
+                frm.n1.focus();
+            } 
+            else if (frm.n2.value == "") {
+                alert(" Enter num2: ");
+                frm.n2.focus();
+            }
+            else if(frm.n3.value == ""){
+                alert("Enter Num3: ");
+                frm.n3.focus();
+            }
+            else if(frm.n4.value == ""){
+                alert("Enter num4: ");
+                frm.n4.focus();
+            }
+            else {
+                num1 = parseInt(frm.n1.value);
+                num2 = parseInt(frm.n2.value);
+                num3 = parseInt(frm.n3.value);
+                num4 = parseInt(frm.n4.value);
+                a = num1 + num2 + num3 + num4;
+                frm.res.value = a;
+            }
+        }
+        function sub() {
+            var num1, num2, num3, num4;
+            if (frm.n1.value == "") {
+                alert(" Enter num1: ");
+                frm.n1.focus();
+            } 
+            else if (frm.n2.value == "") {
+                alert(" Enter num2: ");
+                frm.n2.focus();
+            }
+            else if(frm.n3.value == ""){
+                alert("Enter Num3: ");
+                frm.n3.focus();
+            }
+            else if(frm.n4.value == ""){
+                alert("Enter num4: ");
+                frm.n4.focus();
+            }
+            else {
+                num1 = parseInt(frm.n1.value);
+                num2 = parseInt(frm.n2.value);
+                num3 = parseInt(frm.n3.value);
+                num4 = parseInt(frm.n4.value);
+                a = num1 - num2 - num3 - num4;
+                frm.res.value = a;
+            }
+        }
+        function mlt() {
+            var num1, num2, num3, num4;
+            if (frm.n1.value == "") {
+                alert(" Enter num1: ");
+                frm.n1.focus();
+            } 
+            else if (frm.n2.value == "") {
+                alert(" Enter num2: ");
+                frm.n2.focus();
+            }
+            else if(frm.n3.value == ""){
+                alert("Enter Num3: ");
+                frm.n3.focus();
+            }
+            else if(frm.n4.value == ""){
+                alert("Enter num4: ");
+                frm.n4.focus();
+            }
+            else {
+                num1 = parseInt(frm.n1.value);
+                num2 = parseInt(frm.n2.value);
+                num3 = parseInt(frm.n3.value);
+                num4 = parseInt(frm.n4.value);
+                a = num1 * num2 * num3 * num4;
+                frm.res.value = a;
+            }    
+        }
+        function div() {
+            var num1, num2, num3, num4;
+            if (frm.n1.value == "") {
+                alert(" Enter num1: ");
+                frm.n1.focus();
+            } 
+            else if (frm.n2.value == "") {
+                alert(" Enter num2: ");
+                frm.n2.focus();
+            }
+            else if(frm.n3.value == ""){
+                alert("Enter Num3: ");
+                frm.n3.focus();
+            }
+            else if(frm.n4.value == ""){
+                alert("Enter num4: ");
+                frm.n4.focus();
+            }
+            else {
+                num1 = parseInt(frm.n1.value);
+                num2 = parseInt(frm.n2.value);
+                num3 = parseInt(frm.n3.value);
+                num4 = parseInt(frm.n4.value);
+                a = num1 / num2 / num3 / num4;
+                frm.res.value = a;
+            }
+        }
+    </script>
+</body>
+
+</html>

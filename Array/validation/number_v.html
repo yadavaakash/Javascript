@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <form name="frm" onsubmit="vform()">
+            Enter Mobile No: <input type="text" name="mno" >
+            <input type="submit" value="Submit Data">
+        </form> 
+
+            <script>
+                function vform(){
+                mno = document.frm.mno.value;
+                if(mno == ""){
+                    alert("Enter Mobile No : ");
+                }
+                else if(isNaN(mno)){
+                    alert("Enter Digits Only");
+                    return false;
+                }
+            }
+            </script>
+        
+    </body>
+</html>

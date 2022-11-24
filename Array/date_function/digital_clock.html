@@ -1,0 +1,25 @@
+<html>
+    <body onload="startTime()">
+        
+        <h1>Current Time :<div id="text"></div></h1>
+        <script>
+            function startTime(){
+                let time = new Date();
+                let h = time.getHours();
+                let m = time.getMinutes();
+                let s = time.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById("text").innerHTML = h + " : " + m  + " : " + s;
+                setTimeout(startTime,1000);
+            }
+            function checkTime(i){
+                if (i<10){
+                    i = "0"+ i;
+
+                }
+                return i;
+            }
+        </script>
+    </body>
+</html>

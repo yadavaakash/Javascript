@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            function myFunction(){
+                x = frm.myselect.value;
+                document.write("You selected: ",x);
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frm">
+            <select name="myselect" onchange="myFunction()">
+                
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+                <option value="Java">Java</option>
+                <option value="HTML">HTML</option>
+            </select>
+        </form>
+    </body>
+</html>

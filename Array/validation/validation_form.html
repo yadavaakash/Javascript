@@ -1,0 +1,76 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <form name="frm" onsubmit="validationform()">
+        Enter name: <input type="text" name="myname" /><br><br>
+        Enter Mobile No: <input type="text" name="mno"><br><br>
+        Gender : <input type="radio" name="gender" value="Male">Male
+                 <input type="radio" name="gender" value="Female">Female<br><br>
+        Hobby : <input type="checkbox" name="hobby" value="Reading">Reading
+                <input type="checkbox" name="hobby" value="Dancing">Dancing
+                <input type="checkbox" name="hobby" value="Singing">Singing <br><br>
+        City : <select name="city">
+            <option value=" "> --- Select City --- </option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Surat">Surat</option>
+            <option value="Rajkot">Rajkot</option>
+        </select> <br><br>
+        Email : <input type="text" name="email"> <br><br>
+
+        <input type="submit" value="Submit Data">
+    </form>
+
+
+    <script>
+        function validationform() {
+            myname = frm.myname.value;
+
+            mobile = frm.mno.value;
+            email_id = frm.email.value;
+            atposition = email_id.indexOf("@");
+            dotposition = email_id.lastIndexOf(".")
+
+            
+            if (myname == "") {
+                alert("Enter Name");
+                myname.focus();
+                return false;
+            }
+            else if (mobile == "") {
+                alert("Enter Mobile No");
+                mobile.focus();
+                return false;
+            } else if (isNaN(mobile)) {
+                alert("Enter Digits Only");
+                mobile.focus();
+                return false;
+            }
+            else if ((frm.gender[0].checked == false) &&
+                (frm.gender[1].checked == false)) {
+                alert("Select Your Gender...");
+                return false;
+            }
+            else if ((frm.hobby[0].checked == false) &&
+                (frm.hobby[1].checked == false) &&
+                (frm.hobby[2].checked == false)) {
+                alert("Select Your Hobby...")
+                return false;
+            }
+            else if ((frm.city.value == " ")) {
+                alert("Select Your City...");
+                return false;
+            }
+            else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email_id.length) {
+                alert("Plese enter a valid E-mail address \n atposition :" + atposition + "\n dotposition :" + dotposition)
+                return false;
+            }
+            return true;
+        }    
+    </script>
+</body>
+
+</html>
